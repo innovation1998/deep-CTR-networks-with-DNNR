@@ -7,7 +7,7 @@ from deepctr_torch.layers.activation import activation_layer
 
 class DNNR(nn.Module):
     def __init__(self, inputs_dim, hidden_units, activation='relu', l2_reg=0, dropout_rate=0, use_bn=True,
-                 init_std=0.0001, dice_dim=3, seed=1024, device='cpu'):
+                 init_std=0.0001, dice_dim=2, seed=1024, device='cpu'):
         super(DNNR, self).__init__()
         self.dropout_rate = dropout_rate
         self.dropout = nn.Dropout(dropout_rate)
