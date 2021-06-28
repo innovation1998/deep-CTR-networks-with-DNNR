@@ -69,6 +69,8 @@ if __name__ == "__main__":
                     cross_num=4,
                     low_rank=64,
                     num_experts=4,
+                    use_bn=True,
+                    activation = 'dice',
                     dnn_hidden_units=(1024,1024,1024),
                     l2_reg_embedding=1e-5,
                     device=device)
