@@ -70,7 +70,7 @@ if __name__ == "__main__":
                     low_rank=64,
                     num_experts=4,
                     use_bn=True,
-                    activation = 'dice',
+                    dnn_activation='dice',
                     dnn_hidden_units=(1024,1024,1024),
                     l2_reg_embedding=1e-5,
                     device=device)
