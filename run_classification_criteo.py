@@ -58,29 +58,6 @@ if __name__ == "__main__":
     if use_cuda and torch.cuda.is_available():
         device = 'cuda:0'
 
-    DNN_AUC=[]
-    DNN_Logloss=[]
-    xDeepFM_AUC=[]
-    xDeepFM_Logloss=[]
-    xDeepFMRes_AUC=[]
-    xDeepFMRes_Logloss=[]
-    NFM_AUC=[]
-    NFM_Logloss=[]
-    DCN_AUC=[]
-    DCN_Logloss=[]
-    DCNMix_AUC=[]
-    DCNMix_Logloss=[]
-    DCNMixNoExpert_AUC=[]
-    DCNMixNoExpert_Logloss=[]
-    DCRN_AUC=[]
-    DCRN_Logloss=[]
-    DCRNMix_AUC=[]
-    DCRNMix_Logloss=[]
-    DCRNMixNoExpert_AUC=[]
-    DCRNMixNoExpert_Logloss=[]
-    DNN_res_AUC=[]
-    DNN_res_Logloss=[]
-
     m = 1
     for i in range(m):
         train, test = train_test_split(data, test_size=0.1)
