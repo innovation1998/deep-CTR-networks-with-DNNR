@@ -41,7 +41,7 @@ class timestamp_preprocess:
         return transform_list
 
 def preprocess():
-    root = './ml-10M100K/'
+    root = './datasets/ml-10M100K/'
     movies = pd.read_table(
         root+'movies.dat',
         header=None,
@@ -146,31 +146,6 @@ if __name__ == "__main__":
     use_cuda = True
     if use_cuda and torch.cuda.is_available():
         device = 'cuda:0'
-
-    DNN_MSE=[]
-    DNN_res_MSE=[]
-    NFM_MSE=[]
-    DCN_MSE=[]
-    DCNMix_MSE=[]
-    DCNMixNoExpert_MSE=[]
-    DCRN_MSE=[]
-    DCRNMix_MSE=[]
-    DCRNMixNoExpert_MSE=[]
-    xDeepFM_MSE=[]
-    xDeepFMRes_MSE=[]
-
-    DNN_AUC=[]
-    DNN_res_AUC=[]
-    NFM_AUC=[]
-    DCN_AUC=[]
-    DCNMix_AUC=[]
-    DCNMixNoExpert_AUC=[]
-    DCRN_AUC=[]
-    DCRNMix_AUC=[]
-    DCRNMixNoExpert_AUC=[]
-    DNN_res_AUC=[]
-    xDeepFM_AUC=[]
-    xDeepFMRes_AUC=[]
 
     # 3.generate input data for model
     train, test = train_test_split(data, test_size=0.1)
