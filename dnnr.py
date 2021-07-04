@@ -12,7 +12,7 @@ class DNNR(nn.Module):
         self.dropout_rate = dropout_rate
         self.dropout = nn.Dropout(dropout_rate)
         self.seed = seed
-        self.shorcut_num = shorcut_num
+        self.shorcut_num = shortcut_num
         self.l2_reg = l2_reg
         self.use_bn = use_bn
         if len(hidden_units) == 0:
